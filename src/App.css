@@ -1,38 +1,250 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, SF Pro Display, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+main {
+  background: #292929;
   min-height: 100vh;
+  max-height: max-content;
+  width: 100vw;
+  display: flex;
+}
+
+.edvora-product-filter-container {
+  width: 200px;
+  height: 275px;
+  background: #131313;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
+  padding: 25px;
+  margin-left: 25px;
+  position: sticky;
+  top: 10px;
+}
+
+.edvora-product-filter-container h4 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #a5a5a5;
+  border-bottom: 1px solid #cbcbcb;
+  margin: 0 0 25px 0;
+  padding-bottom: 15px;
+}
+
+.edvora-product-filter-container .edvora-select-wrapper {
+  width: 150px;
+  height: 37.5px;
+  background: #232323;
+  border-radius: 4.68775px;
+  margin: 0 0 15px 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.edvora-select-wrapper select {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  background: #232323;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.left-container {
+  padding-top: 25px;
+}
+
+.right-container {
+  width: calc(100vw - 325px);
+  margin-left: 35px;
+  padding-top: 50px;
+}
+
+.right-container h2 {
+  color: rgba(255, 255, 255, 0.87);
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.right-container h4 {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 15px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: #232323;
+  border-radius: 4.68775px;
+}
+
+.item img {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 10px;
+  top: 10px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+}
+
+.product-name {
+  position: absolute;
+  width: fit-content;
+  height: 16px;
+  left: 95px;
+  top: 12px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.brand-name {
+  position: absolute;
+  width: 91px;
+  height: 14px;
+  left: 95px;
+  top: 35px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.price {
+  position: absolute;
+  width: 78.96px;
+  height: 15px;
+  left: 95px;
+  top: 60px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #ffffff;
+}
+
+.dollar {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.location-date {
+  position: absolute;
+  width: 84%;
+  height: 14px;
+  left: 10px;
+  top: 90px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description {
+  position: absolute;
+  width: 183px;
+  height: 15px;
+  left: 10px;
+  top: 120px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Alice Carousel Styles */
+.alice-carousel__dots {
+  display: none !important;
+}
+
+.alice-carousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  direction: ltr;
+  padding: 20px 35px 20px 20px;
+  background: #131313;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.alice-carousel__prev-btn {
+  display: none !important;
+}
+
+.alice-carousel__next-btn {
+  display: contents !important;
+}
+
+.alice-carousel__next-btn-item {
+  position: absolute;
+  right: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: white !important;
+}
+
+.alice-carousel-container {
+  margin-top: 10px;
+}
+
+.alice-carousel__stage-item {
+  max-width: 300px;
+  min-width: 300px;
+  margin-right: 10px !important;
+  transform: scale3d(0.9, 0.9, 0.9);
+  transition: all ease-in-out 200ms;
+}
+
+.alice-carousel__stage-item:hover {
+  transform: scaleY(1.05);
+}
+
+/* Alice carousel styles ends here */
+
+@media only screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .right-container {
+    width: 80%;
   }
 }
