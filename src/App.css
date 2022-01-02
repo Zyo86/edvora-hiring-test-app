@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif, SF Pro Display, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: sans-serif, SF Pro Display, "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif !important;
 }
 
 main {
@@ -187,6 +188,12 @@ main {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.no-data-message {
+  height: 100%;
+  color: white;
+  padding-top: 30px;
+}
+
 /* Alice Carousel Styles */
 .alice-carousel__dots {
   display: none !important;
@@ -197,7 +204,7 @@ main {
   width: 100%;
   margin: auto;
   direction: ltr;
-  padding: 20px 35px 20px 20px;
+  padding: 20px 0 20px 0;
   background: #131313;
   border-radius: 15px;
   margin-top: 10px;

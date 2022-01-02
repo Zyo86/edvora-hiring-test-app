@@ -112,14 +112,24 @@ function App() {
           <div className="right-container">
             <h2>Edvora</h2>
             <h4>Products</h4>
-            {filteredProductNames.map((product) => (
-              <ProductCarousel
-                productDetails={response.data.filter(
-                  (item) => item.product_name === product
-                )}
-                productName={product}
-              />
-            ))}
+            {!loading ? (
+              filteredProductNames.length > 0 ? (
+                filteredProductNames.map((product) => (
+                  <ProductCarousel
+                    productDetails={response.data.filter(
+                      (item) => item.product_name === product
+                    )}
+                    productName={product}
+                  />
+                ))
+              ) : (
+                <div className="no-data-message">
+                  No data available based on filtered criteria
+                </div>
+              )
+            ) : (
+              <div className="no-data-message">Loading data...</div>
+            )}
           </div>
         </main>
       </header>

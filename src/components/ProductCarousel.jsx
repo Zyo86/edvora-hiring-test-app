@@ -46,6 +46,8 @@ const ProductCarousel = (props) => {
           keyboardNavigation
           items={items}
           responsive={responsive}
+          paddingLeft={20}
+          paddingRight={20}
           controlsStrategy="alternate"
         />
       </div>
